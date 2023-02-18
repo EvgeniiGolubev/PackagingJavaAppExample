@@ -1,7 +1,4 @@
 module com.example.packagingjavaappexample {
-    requires javafx.controls;
-    requires javafx.fxml;
-
-    opens com.example.packagingjavaappexample to javafx.fxml;
+    requires java.desktop;
     exports com.example.packagingjavaappexample;
 }
