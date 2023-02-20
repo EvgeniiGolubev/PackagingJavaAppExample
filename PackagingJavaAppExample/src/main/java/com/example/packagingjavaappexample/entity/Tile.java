@@ -4,12 +4,15 @@ import java.awt.*;
 
 public class Tile {
     private int value;
+
     public Tile() {
         this.value = 0;
     }
+
     public Tile(int value) {
         this.value = value;
     }
+
     public boolean isEmpty() {
         return value == 0;
     }

@@ -2,8 +2,6 @@ package com.example.packagingjavaappexample.view;
 
 import com.example.packagingjavaappexample.controller.Controller;
 import com.example.packagingjavaappexample.entity.Tile;
-import com.example.packagingjavaappexample.model.Model;
-
 import javax.swing.*;
 import java.awt.*;
 

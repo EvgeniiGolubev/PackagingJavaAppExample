@@ -11,6 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <build>
@@ -31,7 +33,6 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</mainClass>
@@ -55,11 +56,11 @@
                     <appVersion>1.0.0</appVersion>
                     <vendor>com.example</vendor>
                     <destination>target/dist</destination>
+                    <winDirChooser>true</winDirChooser>
                     <module>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</module>
                     <runtimeImage>target/Game2048</runtimeImage>
-                    <icon>${project.build.outputDirectory}/com/example/packagingjavaappexample/icon.png</icon>
+                    <icon>${project.build.outputDirectory}/com/example/packagingjavaappexample/icon.ico</icon>
                     <javaOptions>
-                        <option>--enable-preview</option>
                         <option>-Dfile.encoding=UTF-8</option>
                     </javaOptions>
                 </configuration>
