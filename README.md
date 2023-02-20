@@ -7,7 +7,7 @@ do not have a JRE on their PC. The assembly of the application into a distributi
 
 <ul>
   <li>To run the application:
-    <ul><li><code>mvn clean javafx:runc</code></li></ul>
+    <ul><li><code>mvn clean javafx:run</code></li></ul>
   </li>
   <p>
   <li>To build a distribution:
