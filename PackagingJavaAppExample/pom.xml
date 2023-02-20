@@ -46,48 +46,24 @@
                 </executions>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.panteleyev</groupId>-->
-<!--                <artifactId>jpackage-maven-plugin</artifactId>-->
-<!--                <version>1.6.0</version>-->
-<!--                <configuration>-->
-<!--                    <name>App</name>-->
-<!--                    <appVersion>1.0.0</appVersion>-->
-<!--                    <vendor>com.example</vendor>-->
-<!--                    <destination>dist</destination>-->
-<!--                    <module>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</module>-->
-<!--                    <runtimeImage>target/Game2048</runtimeImage>-->
-<!--                    <icon>${project.basedir}/icon.png</icon>-->
-<!--                    <javaOptions>-->
-<!--                        <option>-Dfile.encoding=UTF-8</option>-->
-<!--                    </javaOptions>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-shade-plugin</artifactId>-->
-<!--                <version>3.2.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <shadedArtifactAttached>true</shadedArtifactAttached>-->
-<!--                            <transformers>-->
-<!--                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
-<!--                                    <mainClass>com.example.packagingjavaappexample.Main</mainClass>-->
-<!--                                    <manifestEntries>-->
-<!--                                        <Multi-Release>true</Multi-Release>-->
-<!--                                    </manifestEntries>-->
-<!--                                </transformer>-->
-<!--                            </transformers>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <name>Game2048</name>
+                    <appVersion>1.0.0</appVersion>
+                    <vendor>com.example</vendor>
+                    <destination>target/dist</destination>
+                    <module>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</module>
+                    <runtimeImage>target/Game2048</runtimeImage>
+                    <icon>${project.build.outputDirectory}/com/example/packagingjavaappexample/icon.png</icon>
+                    <javaOptions>
+                        <option>--enable-preview</option>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

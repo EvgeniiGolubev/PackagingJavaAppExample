@@ -2,6 +2,7 @@ package com.example.packagingjavaappexample.view;
 
 import com.example.packagingjavaappexample.controller.Controller;
 import com.example.packagingjavaappexample.entity.Tile;
+import com.example.packagingjavaappexample.model.Model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,6 +24,16 @@ public class View extends JPanel {
 
     @Override
     public void paint(Graphics g) {
+        if (isGameWon) {
+            int answer = JOptionPane.showConfirmDialog(this, "You won!\nRestart game?");
+            if (answer == JOptionPane.YES_OPTION) controller.resetGame();
+            else System.exit(0);
+        } else if (isGameLost) {
+            int answer = JOptionPane.showConfirmDialog(this, "You lose!\nRestart game?");
+            if (answer == JOptionPane.YES_OPTION) controller.resetGame();
+            else System.exit(0);
+        }
+
         super.paint(g);
         g.setColor(BG_COLOR);
         g.fillRect(0, 0, this.getSize().width, this.getSize().height);
@@ -33,12 +44,6 @@ public class View extends JPanel {
         }
 
         g.drawString("Score: " + controller.getScore(), 140, 465);
-
-        if (isGameWon) {
-            JOptionPane.showMessageDialog(this, "You've won!");
-        } else if (isGameLost) {
-            JOptionPane.showMessageDialog(this, "You've lost :(");
-        }
     }
 
     private void drawTile(Graphics g2, Tile tile, int x, int y) {

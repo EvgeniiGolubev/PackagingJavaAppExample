@@ -25,6 +25,7 @@ public class Controller extends KeyAdapter {
     }
 
     public void resetGame() {
+        model.setMaxTile(2);
         model.setScore(0);
         view.setGameLost(false);
         view.setGameWon(false);
