@@ -35,10 +35,11 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
+                            <compress>2</compress>
                             <mainClass>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</mainClass>
-                            <launcher>Game2048-launcher</launcher>
-                            <jlinkZipName>Game2048-zip</jlinkZipName>
-                            <jlinkImageName>Game2048</jlinkImageName>
+                            <launcher>game2048-image-launcher</launcher>
+                            <jlinkZipName>game2048-image-zip</jlinkZipName>
+                            <jlinkImageName>game2048-image</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
