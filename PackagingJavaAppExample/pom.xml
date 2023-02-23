@@ -59,7 +59,7 @@
                     <destination>target/dist</destination>
                     <winDirChooser>true</winDirChooser>
                     <module>com.example.packagingjavaappexample/com.example.packagingjavaappexample.Main</module>
-                    <runtimeImage>target/Game2048</runtimeImage>
+                    <runtimeImage>target/game2048-image</runtimeImage>
                     <icon>${project.build.outputDirectory}/com/example/packagingjavaappexample/icon.ico</icon>
                     <javaOptions>
                         <option>-Dfile.encoding=UTF-8</option>
